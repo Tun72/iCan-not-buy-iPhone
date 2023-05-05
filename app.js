@@ -1,7 +1,6 @@
 const tlH = gsap.timeline({
   scrollTrigger: {
     trigger: ".second-page",
-    markers: { startColor: "white", endColor: "white" },
     scrub: true,
     start: "-40%",
     end: "40%",
@@ -14,7 +13,7 @@ tlH.fromTo(
     color: "rgba(255, 255, 255, 0.3",
   },
   {
-    color: "#fff",
+    color: "rgba(255, 255, 255, 1",
     stagger: 1,
   }
 );
@@ -22,20 +21,19 @@ tlH.fromTo(
 const tlRemove = gsap.timeline({
   scrollTrigger: {
     trigger: ".second-page",
-    markers: { startColor: "white", endColor: "white" },
     scrub: true,
-    start: "-40%",
+    start: "-10%",
     end: "40%",
   },
 });
 
-tlH.fromTo(
+tlRemove.fromTo(
   ".highlight",
   {
     color: "rgba(255, 255, 255, 1",
   },
   {
-    color: "rgba(255, 255, 255, 0.2",
+    color: "rgba(255, 255, 255, 0.3",
     stagger: 1,
   }
 );
